@@ -1,7 +1,7 @@
 ﻿using System;
-using Tassan.Me.API.Entities.Base.Interfaces;
+using Tassan.Me.API.Base.Interfaces;
 
-namespace Tassan.Me.API.Entities.Base.Objects
+namespace Tassan.Me.API.Base.Objects
 {
     public class Entity : IEntity
     {

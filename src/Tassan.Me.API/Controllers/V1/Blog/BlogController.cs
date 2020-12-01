@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Tassan.Me.API.Entities.Blog;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Tassan.Me.API.Base.Entities.Blog;
+using Tassan.Me.API.Base.Interfaces;
 
 namespace Tassan.Me.API.Controllers.V1.Blog 
 {
@@ -8,9 +10,18 @@ namespace Tassan.Me.API.Controllers.V1.Blog
     [Route("/v{version:apiVersion}/blog")]
     public class BlogController : Controller
     {
-        [HttpPost("create")]
-        public IActionResult WritePost([FromBody] Post post)
+        private readonly IPostWriter _postWriter;
+
+        public BlogController(IPostWriter postWriter)
         {
+            _postWriter = postWriter;
+        }
+
+        [HttpPost("create")]
+        public async Task<IActionResult> WritePost([FromBody] Post post)
+        {
+            await _postWriter.WritePost(post);
+            
             return Ok(post);
         }
 

@@ -1,7 +1,6 @@
-﻿using System;
-using Tassan.Me.API.Entities.Base.Objects;
+﻿using Tassan.Me.API.Base.Objects;
 
-namespace Tassan.Me.API.Entities.Blog
+namespace Tassan.Me.API.Base.Entities.Blog
 {
     public class Post : BlogEntity
     {

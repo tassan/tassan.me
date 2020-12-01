@@ -13,7 +13,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.SwaggerUI;
-using Tassan.Me.API.Extensions;
+using Tassan.Me.API.Base.Configuration;
+using Tassan.Me.API.Base.Extensions;
 
 namespace Tassan.Me.API
 {
@@ -33,6 +34,7 @@ namespace Tassan.Me.API
             services.ConfigureMvc();
             services.ConfigureVersioning();
             services.ConfigureSwagger();
+            DependencyInjectionConfig.ConfigureContainer(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

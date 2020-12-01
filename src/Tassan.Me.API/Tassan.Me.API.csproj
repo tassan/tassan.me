@@ -12,5 +12,9 @@
       <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="_data\_posts" />
+    </ItemGroup>
+
 
 </Project>

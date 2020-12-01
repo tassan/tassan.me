@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Tassan.Me.API.Extensions
+namespace Tassan.Me.API.Base.Extensions
 {
     public static class ServiceCollectionExtensions
     {

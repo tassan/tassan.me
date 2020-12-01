@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tassan.Me.API.Entities.Base.Interfaces
+namespace Tassan.Me.API.Base.Interfaces
 {
     public interface IEntity
     {
