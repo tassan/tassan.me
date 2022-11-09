@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flávio Tassan | What to do when you just need to update your master/main branch and don’t want to lose your
+        work in
+        progress?</title>
+    <link rel="shortcut icon" href="../images/dragon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <main>
+        <a href="/">
+            <header>
+                <h2>What to do when you just need to update your master/main branch and don’t want to lose your work in
+                    progress?</h2>
+            </header>
+        </a>
+        <article class="text">
+            <p>
+                <span>Nov 9 2021</span>
+            </p>
+
+            <p>Imagine you're on branch A, but you need to update your master/main branch, whatever your motive may be,
+                and
+                then, you want to get back to your working branch. Well, this is what you should do:</p>
+
+            <p>On Branch A:</p>
+
+            <code>
+            git stash
+            <br>
+            git switch master/main
+            </code>
+
+            <p>On Branch Master/Main:</p>
+
+            <code>
+                git pull
+            <br>
+                git switch branch-a
+            <br>
+            </code>
+
+
+            <p>Now here is the trick, if you do a git status, git will problaby say this:</p>
+
+            <blockquote class="terminal">
+                On branch branch-a <br>
+                Your branch is up to date with 'origin/branch-a'.
+
+                nothing to commit, working tree clean
+            </blockquote>
+
+            <p>Which is true, for instance, if you use: <code>git log --oneline</code>, you'll see your last commit
+                listed
+                first, as if any
+                of your previous work was lost. But, don't panic. Now you just have to “unstash” your work using:</p>
+
+            <code>git stash pop</code>
+
+            <p>And git will prompt all your work items, that you thought you've lost.</p>
+        </article>
+    </main>
+</body>
+
+</html>

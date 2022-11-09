@@ -1,0 +1,167 @@
+body {
+    background: #013328;
+    color: white;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+    padding: 15px;
+
+    font-family: 'JetBrains Mono', Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+}
+
+main {
+    display: block;
+}
+
+.about {
+    color: #c7a003;
+}
+
+.about-container {
+    display: block;
+    margin: 10px auto;
+    padding: 0 auto;
+
+    align-items: center;
+    text-align: justify;
+
+    width: 50%;
+    height: auto;
+}
+
+.light-yellow {
+    color: #ede599;
+}
+
+.home {
+    width: 70%;
+    height: auto;
+
+    margin: 0 auto;
+    padding: 5%;
+}
+
+.presentation-container {
+    top: 10px;
+    left: 50px;
+
+    margin: 0 auto;
+    padding: 10px;
+
+    background: white;
+    color: #013328;
+}
+
+.presentation {
+    width: 100%;
+
+    font-size: 2em;
+}
+
+.presentation a {
+    text-decoration: none;
+    color: #c7a003;
+}
+
+.presentation a:hover {
+    font-style: italic;
+}
+
+.presentation a::first-letter {
+    text-transform: uppercase;
+}
+
+.signature {
+    margin: 0 auto;
+    padding: 0 auto;
+
+    font-size: 2em;
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #013328;
+}
+
+/* ≥ 568px */
+@media screen and (min-width: 35.5em) {
+    .presentation {
+        font-size: 1em;
+    }
+
+    .signature {
+        font-size: 2em;
+    }
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+    .presentation {
+        font-size: 1em;
+    }
+
+    .signature {
+        font-size: 1.8em;
+    }
+}
+
+/* ≥ 1024px */
+@media screen and (min-width: 64em) {
+    .presentation {
+        font-size: 1.5em;
+    }
+
+    .signature {
+        font-size: 2.2em;
+    }
+}
+
+/* ≥ 1280px */
+@media screen and (min-width: 80em) {
+    .presentation {
+        font-size: 2em;
+    }
+
+    .signature {
+        font-size: 3em;
+    }
+}
+
+/* ≥ 1920px */
+@media screen and (min-width: 120em) {
+    .presentation {
+        font-size: 1em;
+    }
+
+    .signature {
+        font-size: 2em;
+    }
+}
+
+/* ≥ 2560px */
+@media screen and (min-width: 160em) {
+    .presentation {
+        font-size: 1.8em;
+    }
+
+    .signature {
+        font-size: 2.7em;
+    }
+}
+
+/* ≥ 3840px */
+@media screen and (min-width: 240em) {
+    .presentation {
+        font-size: 1em;
+    }
+
+    .signature {
+        font-size: 2em;
+    }
+}
